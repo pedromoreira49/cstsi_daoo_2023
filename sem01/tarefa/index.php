@@ -12,6 +12,9 @@ use classes\Paciente;
     $paciente2 = new Paciente('Luis', 21, 1.8, 55);
     $imc = new Imc();
     $imc::calc($paciente1);
+    $imc::classificarSaude($paciente1);
+    
     $imc::calc($paciente2);
+    $imc::classificarSaude($paciente2);
 
 ?>

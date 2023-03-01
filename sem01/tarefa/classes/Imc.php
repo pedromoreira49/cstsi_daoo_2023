@@ -12,7 +12,7 @@
             return $imc;
         }
 
-        public static function showImc(Paciente $paciente){
+        public static function mostrarImc(Paciente $paciente){
             $imc = Imc::calc($paciente);
             echo "\nO IMC de $paciente->nome é: ". number_format($imc, 2) . "\n";
         }
