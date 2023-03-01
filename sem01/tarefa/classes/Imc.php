@@ -21,6 +21,22 @@
             echo "\nO paciente $paciente->nome está: ". $mensage ."\n";
         }
 
+        public static function classificarSaude(Paciente $paciente){
+            $imc = Imc::calc($paciente);
+            if($imc < 18.5){
+                Imc::mensagem($paciente, "Abaixo do peso");
+            }
+            if($imc >= 18.5 && $imc <= 24.9){
+                Imc::mensagem($paciente, "Saudável");
+            }
+            if($imc >= 25 && $imc <= 29.0){
+                Imc::mensagem($paciente, "Sobrepeso");
+            }
+            if($imc >= 30){
+                Imc::mensagem($paciente, "Obesidade");
+            }
+        }
+
     }
 
 ?>
