@@ -9,16 +9,9 @@
 
         public static function calc(Paciente $paciente){
             $imc = $paciente->peso / pow($paciente->altura, 2);
-            echo "\nO IMC de $paciente->nome é: ". number_format($imc, 2) . "\n";
+            return $imc;
         }
 
-        public static function classificarSaude(Paciente $paciente){
-
-        }
-
-        public static function classificarPelaIdade(){
-            
-        }
 
     }
 
