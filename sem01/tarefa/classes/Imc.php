@@ -17,6 +17,10 @@
             echo "\nO IMC de $paciente->nome é: ". number_format($imc, 2) . "\n";
         }
 
+        public static function mensagem(Paciente $paciente, string $mensage){
+            echo "\nO paciente $paciente->nome está: ". $mensage ."\n";
+        }
+
     }
 
 ?>
