@@ -26,13 +26,13 @@
             if($imc < 18.5){
                 Imc::mensagem($paciente, "Abaixo do peso");
             }
-            if($imc >= 18.5 && $imc <= 24.9){
+            else if($imc >= 18.5 && $imc <= 24.9){
                 Imc::mensagem($paciente, "Saudável");
             }
-            if($imc >= 25 && $imc <= 29.0){
+            else if($imc >= 25 && $imc <= 29.0){
                 Imc::mensagem($paciente, "Sobrepeso");
             }
-            if($imc >= 30){
+            else {
                 Imc::mensagem($paciente, "Obesidade");
             }
         }
