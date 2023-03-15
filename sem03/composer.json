@@ -1,0 +1,17 @@
+{
+    "name": "kiraj/sem03",
+    "description": "Atividades da semana 03 da disciplina Desenvolvimento de Aplicações Orientado a Objetos (CSTSI)",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Kiraj\\Sem03\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pedromoreira49",
+            "email": "jpedrostonemoreira@gmail.com"
+        }
+    ],
+    "require": {}
+}
