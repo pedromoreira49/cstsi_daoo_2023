@@ -4,6 +4,7 @@ use App\Http\Controllers\AgendamentosController;
 use App\Http\Controllers\HelpersController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,3 +39,7 @@ Route::get('/helper/{id}', [HelpersController::class, 'show']);
 Route::get('/agendamento', [AgendamentosController::class, 'index']);
 
 Route::get('/agendamento/{id}', [AgendamentosController::class, 'show']);
+
+Route::get('/user', [UsersController::class, 'index']);
+
+Route::get('/user/{id}', [UsersController::class, 'show']);
