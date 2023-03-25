@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgendamentosController;
 use App\Http\Controllers\HelpersController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
@@ -33,3 +34,7 @@ Route::get('/produto/{id}', [ProdutoController::class, 'show']);
 Route::get('/helper', [HelpersController::class, 'index']);
 
 Route::get('/helper/{id}', [HelpersController::class, 'show']);
+
+Route::get('/agendamento', [AgendamentosController::class, 'index']);
+
+Route::get('/agendamento/{id}', [AgendamentosController::class, 'show']);
