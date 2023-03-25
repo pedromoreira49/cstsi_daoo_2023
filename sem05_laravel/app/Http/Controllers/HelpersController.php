@@ -18,7 +18,7 @@ class HelpersController extends Controller
     }
 
     public function show($id){
-        return view('helper', ['helper'=>$this->helper->find($id)]);
+        return view('single-helper', ['helper'=>$this->helper->find($id)]);
     }
 
 }
