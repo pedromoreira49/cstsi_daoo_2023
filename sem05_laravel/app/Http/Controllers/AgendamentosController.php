@@ -14,7 +14,7 @@ class AgendamentosController extends Controller
     }
 
     public function index(){
-        return view('agendamento', ['agendamentos'=>$this->agendamentos->all()]);
+        return view('agendamentos', ['agendamentos'=>$this->agendamentos->all()]);
     }
 
     public function show($id){
