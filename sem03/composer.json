@@ -1,17 +1,29 @@
 {
-    "name": "kiraj/sem03",
-    "description": "Atividades da semana 03 da disciplina Desenvolvimento de Aplicações Orientado a Objetos (CSTSI)",
-    "type": "project",
+    "name": "daoo/aula_03",
+    "license": "GPL",
     "autoload": {
         "psr-4": {
-            "Kiraj\\Sem03\\": "src/"
+            "Daoo\\Aula03\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "pedromoreira49",
-            "email": "jpedrostonemoreira@gmail.com"
+            "name": "Gill Velleda Gonzales",
+            "email": "gillgonzales@ifsul.edu.br"
         }
     ],
-    "require": {}
+    "scripts":{
+        "api":"php -S localhost:8081 src/index.php",
+        "web":"php -S localhost:8080 -t src/web/",
+        "kill":"kill -9  $(ps -ax -o pid,command| grep 'php -S localhost:8081' | grep -v 'grep' | head -n 1 | cut -f 2 -d ' ')",
+        "restart": "composer run kill; composer run api"
+    },
+    "require-dev": {
+        "ramsey/composer-repl": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "ramsey/composer-repl": true
+        }
+    }
 }
