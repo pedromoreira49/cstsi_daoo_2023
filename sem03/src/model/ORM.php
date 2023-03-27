@@ -81,6 +81,29 @@ class ORM
         }
     }
 
+    protected function filter($arrayFilter){
+        try{
+            if(!sizeof($arrayFilter)){
+                throw new Exception("Erro: Filtros vazios");
+            }
+
+            $this->setFilters($arrayFilter);
+            $sql = "SELECT * FROM $this->table WHERE $this->filters";
+            $prepStmt = $this->conn->prepare($sql);
+
+            if($prepStmt->execute($this->values)){
+                return [$prepStmt->fetchAll(\PDO::FETCH_ASSOC), $sql];
+            }
+            return false;
+        }catch(Exception $err){
+            error_log("ERRO " . print_r($err, TRUE));
+            if(isset($prepStmt)){
+                $this->dumpQuery($prepStmt);
+            }
+            throw new Exception("Erro: " . $err->getMessage());
+        }
+    }
+
     protected function selectById($id)
     {
         $sql = "SELECT * FROM $this->table WHERE id = :id";
