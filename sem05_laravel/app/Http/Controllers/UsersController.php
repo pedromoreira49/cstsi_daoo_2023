@@ -36,4 +36,17 @@ class UsersController extends Controller
             dd("Erro ao cadastrar usuários!");
         }
     }
+
+    public function editUser($id){
+        $data = ['user' => Users::find($id)];
+        return view('users/user_edit', $data);
+    }
+
+    public function updateUser(Request $request, $id){
+        $updateUser = $request->all();
+        if(!Users::find($id)->update($updateUser))
+            dd("Erro ao atualizar usuário $id");
+        return redirect('/users');
+    }
+
 }
