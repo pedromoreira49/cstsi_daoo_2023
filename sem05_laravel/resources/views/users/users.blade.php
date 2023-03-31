@@ -25,6 +25,9 @@
                 <td>{{$user->nome}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->senha}}</td>
+                <td>
+                    <a href="{{route('editUser', $user->id)}}" title='Editar'>&#9999<a>
+                </td>
             </tr>
             @endforeach
         </tbody>
