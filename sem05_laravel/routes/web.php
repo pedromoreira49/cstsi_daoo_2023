@@ -7,30 +7,7 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function () {
-    echo 'Hello world';
-});
-
 Route::get('/hellocontroller', [HomeController::class, 'index']);
-
-Route::get('/produto', [ProdutoController::class, 'index']);
-
-Route::get('/produto/{id}', [ProdutoController::class, 'show']);
 
 Route::get('/helper', [HelpersController::class, 'index']);
 
@@ -40,6 +17,28 @@ Route::get('/agendamento', [AgendamentosController::class, 'index']);
 
 Route::get('/agendamento/{id}', [AgendamentosController::class, 'show']);
 
-Route::get('/user', [UsersController::class, 'index']);
+#CRUD (Produtos)
+##read
+Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos');
+Route::get('/produto/{id}', [ProdutoController::class, 'show'])->name('show');
 
-Route::get('/user/{id}', [UsersController::class, 'show']);
+##create
+Route::get('/produto', [ProdutoController::class, 'create'])->name('create');
+Route::post('/produto', [ProdutoController::class, 'store']);
+
+##update
+Route::get('/produto/{id}/edit', [ProdutoController::class, 'edit'])->name('edit');
+Route::post('/produto/{id}/update', [ProdutoController::class, 'update'])->name('update');
+
+##delete
+Route::get('/produto/{id}/delete', [ProdutoController::class, 'delete'])->name('delete');
+Route::post('/produto/{id}/delete', [ProdutoController::class, 'remove'])->name('remove');
+
+#CRUD (Usuários)
+##read
+Route::get('/users', [UsersController::class, 'index'])->name('users');
+Route::get('/user/{id}', [UsersController::class, 'show'])->name('showUser');
+
+##create
+Route::get('/user', [UsersController::class, 'createUser'])->name('createUser');
+Route::post('/user', [UsersController::class, 'storeUser']);
