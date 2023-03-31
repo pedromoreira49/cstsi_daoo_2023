@@ -42,3 +42,8 @@ Route::get('/user/{id}', [UsersController::class, 'show'])->name('showUser');
 ##create
 Route::get('/user', [UsersController::class, 'createUser'])->name('createUser');
 Route::post('/user', [UsersController::class, 'storeUser']);
+
+##update
+Route::get('/user/{id}/edit', [UsersController::class, 'editUser'])->name('editUser');
+Route::post('/user{id}/update', [UsersController::class, 'updateUser'])->name('updateUser');
+
