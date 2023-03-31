@@ -49,4 +49,17 @@ class UsersController extends Controller
         return redirect('/users');
     }
 
+    public function deleteUser($id){
+        return view('users/user_remove', ['user' => Users::find($id)]);
+    }
+
+    public function removeUser(Request $request, $id){
+        if($request->confirmar === "Deletar"){
+            if(!Users::destroy($id)){
+                dd("Erro ao deletar o usuário $id!");
+            }
+        }
+        return redirect('/users');
+    }
+
 }
