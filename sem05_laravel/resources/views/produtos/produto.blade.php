@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Produtos</h1>
-    <p><a href="{{route('create')}}" title="Criar">&#43</a></p>
+    <p><a href="{{route('create')}}" title="Criar">&#43Criar produto</a></p>
     @if ($produtos->count()>0)
     <table>
         <thead>
