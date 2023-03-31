@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Usuarios</h1>
+    <p><a href="{{route('createUser')}}" title="Criar">&#43Criar usuário</a></p>
     @if ($users->count()>0)
     <table>
         <thead>
@@ -26,6 +27,7 @@
                 <td>{{$user->email}}</td>
                 <td>{{$user->senha}}</td>
                 <td>
+                    <a href="{{route('deleteUser', $user->id)}}" title='Deletar'>&#128465</a>
                     <a href="{{route('editUser', $user->id)}}" title='Editar'>&#9999<a>
                 </td>
             </tr>
