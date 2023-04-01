@@ -26,6 +26,7 @@
                 <td>{{$agendamento->helper_id}}</td>
                 <td>{{$agendamento->user_id}}</td>
                 <td>{{$agendamento->created_at}}</td>
+                <td><a href="{{route('editAgendamento', $agendamento->id)}}" title='Editar'>&#9999<a></td>
             </tr>
             @endforeach
         </tbody>
