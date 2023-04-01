@@ -37,4 +37,16 @@ class HelpersController extends Controller
         }
     }
 
+    public function editHelper($id){
+        $data = ['helper' => Helpers::find($id)];
+        return view('helpers/helper_edit', $data);
+    }
+
+    public function updateHelper(Request $request, $id){
+        $updateHelper = $request->all();
+        if(!Helpers::find($id)->update($updateHelper))
+            dd("Erro ao atualizar ajudante $id");
+        return redirect('/helpers');
+    }
+
 }
