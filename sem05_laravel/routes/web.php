@@ -6,11 +6,6 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
-
-Route::get('/agendamento', [AgendamentosController::class, 'index']);
-
-Route::get('/agendamento/{id}', [AgendamentosController::class, 'show']);
-
 #CRUD (Produtos)
 ##read
 Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos');
@@ -61,3 +56,12 @@ Route::post('/helper/{id}/update', [HelpersController::class, 'updateHelper'])->
 ##delete
 Route::get('/helper/{id}/delete', [HelpersController::class, 'deleteHelper'])->name('deleteHelper');
 Route::post('/helper/{id}/delete', [HelpersController::class, 'removeHelper'])->name('removeHelper');
+
+#CRUD (Agendamentos)
+##read
+Route::get('/agendamentos', [AgendamentosController::class, 'index'])->name('agendamentos');
+Route::get('/agendamento/{id}', [AgendamentosController::class, 'show'])->name('showAgendamento');
+
+##create
+Route::get('/agendamento', [AgendamentosController::class, 'createAgendamento'])->name('createAgendamento');
+Route::post('/agendamento', [AgendamentosController::class, 'storeAgendamento']);
