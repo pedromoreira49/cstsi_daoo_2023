@@ -57,3 +57,7 @@ Route::post('/helper', [HelpersController::class, 'storeHelper']);
 ##update
 Route::get('/helper/{id}/edit', [HelpersController::class, 'editHelper'])->name('editHelper');
 Route::post('/helper/{id}/update', [HelpersController::class, 'updateHelper'])->name('updateHelper');
+
+##delete
+Route::get('/helper/{id}/delete', [HelpersController::class, 'deleteHelper'])->name('deleteHelper');
+Route::post('/helper/{id}/delete', [HelpersController::class, 'removeHelper'])->name('removeHelper');
