@@ -53,3 +53,7 @@ Route::get('/helper/{id}', [HelpersController::class, 'show'])->name('showHelper
 ##create
 Route::get('/helper', [HelpersController::class, 'createHelper'])->name('createHelper');
 Route::post('/helper', [HelpersController::class, 'storeHelper']);
+
+##update
+Route::get('/helper/{id}/edit', [HelpersController::class, 'editHelper'])->name('editHelper');
+Route::post('/helper/{id}/update', [HelpersController::class, 'updateHelper'])->name('updateHelper');
