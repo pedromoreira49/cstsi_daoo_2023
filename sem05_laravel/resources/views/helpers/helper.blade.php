@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Ajudantes</h1>
+    <p><a href="{{route('createHelper')}}" title="Criar">&#43Criar ajudante</a></p>
     @if ($helpers->count()>0)
     <table>
         <thead>
@@ -21,7 +22,7 @@
         <tbody>
             @foreach($helpers as $helper)
             <tr>
-                <td><a href="http://localhost:8000/helper/{{$helper->id}}">{{$helper->id}}</a></td>
+                <td><a href="{{route('showHelper', $helper->id)}}">{{$helper->id}}</a></td>
                 <td>{{$helper->nome}}</td>
                 <td>{{$helper->email}}</td>
                 <td>{{$helper->credential}}</td>
