@@ -22,7 +22,7 @@
         <tbody>
             @foreach($users as $user)
             <tr>
-                <td><a href="http://localhost:8000/user/{{$user->id}}">{{$user->id}}</a></td>
+                <td><a href="{{route('showUser', $user->id)}}">{{$user->id}}</a></td>
                 <td>{{$user->nome}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->senha}}</td>
