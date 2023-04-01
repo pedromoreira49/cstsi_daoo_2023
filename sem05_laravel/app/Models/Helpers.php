@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Helpers extends Model
 {
     use HasFactory;
+    protected $fillable = ['nome', 'email', 'senha', 'credential', 'cpf'];
 }
