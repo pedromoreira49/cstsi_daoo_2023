@@ -2,16 +2,10 @@
 
 use App\Http\Controllers\AgendamentosController;
 use App\Http\Controllers\HelpersController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/hellocontroller', [HomeController::class, 'index']);
-
-Route::get('/helper', [HelpersController::class, 'index']);
-
-Route::get('/helper/{id}', [HelpersController::class, 'show']);
 
 Route::get('/agendamento', [AgendamentosController::class, 'index']);
 
@@ -50,3 +44,8 @@ Route::post('/user{id}/update', [UsersController::class, 'updateUser'])->name('u
 ##delete
 Route::get('/user/{id}/delete', [UsersController::class, 'deleteUser'])->name('deleteUser');
 Route::post('/user/{id}/delete', [UsersController::class, 'removeUser'])->name('removeUser');
+
+#CRUD (Helpers)
+##read
+Route::get('/helpers', [HelpersController::class, 'index'])->name('helpers');
+Route::get('/helper/{id}', [HelpersController::class, 'show'])->name('showHelpers');
