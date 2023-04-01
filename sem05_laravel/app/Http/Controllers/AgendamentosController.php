@@ -36,4 +36,16 @@ class AgendamentosController extends Controller
             dd("Erro ao cadastrar agendamento!");
         }
     }
+
+    public function editAgendamento($id){
+        $data = ['agendamento' => Agendamentos::find($id)];
+        return view('agendamentos/agendamento_edit', $data);
+    }
+
+    public function updateAgendamento(Request $request, $id){
+        $updateAgendamento = $request->all();
+        if(!Agendamentos::find($id)->update($updateAgendamento))
+            dd("Erro ao atualizar agendamento $id");
+        return redirect('/agendamentos');
+    }
 }
