@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Agendamentos</h1>
+    <p><a href="{{route('createAgendamento')}}" title="Criar">&#43Criar agendamento</a></p>
     @if ($agendamentos->count()>0)
     <table>
         <thead>
@@ -21,7 +22,7 @@
         <tbody>
             @foreach($agendamentos as $agendamento)
             <tr>
-                <td><a href="http://localhost:8000/agendamento/{{$agendamento->id}}">{{$agendamento->id}}</a></td>
+                <td><a href="{{route('showAgendamento', $agendamento->id)}}">{{$agendamento->id}}</a></td>
                 <td>{{$agendamento->helper_id}}</td>
                 <td>{{$agendamento->user_id}}</td>
                 <td>{{$agendamento->created_at}}</td>
