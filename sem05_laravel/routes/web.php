@@ -48,4 +48,8 @@ Route::post('/user/{id}/delete', [UsersController::class, 'removeUser'])->name('
 #CRUD (Helpers)
 ##read
 Route::get('/helpers', [HelpersController::class, 'index'])->name('helpers');
-Route::get('/helper/{id}', [HelpersController::class, 'show'])->name('showHelpers');
+Route::get('/helper/{id}', [HelpersController::class, 'show'])->name('showHelper');
+
+##create
+Route::get('/helper', [HelpersController::class, 'createHelper'])->name('createHelper');
+Route::post('/helper', [HelpersController::class, 'storeHelper']);
