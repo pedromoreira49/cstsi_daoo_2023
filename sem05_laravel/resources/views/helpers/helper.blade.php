@@ -26,6 +26,10 @@
                 <td>{{$helper->nome}}</td>
                 <td>{{$helper->email}}</td>
                 <td>{{$helper->credential}}</td>
+                <td>
+                    
+                    <a href="{{route('editHelper', $helper->id)}}" title='Editar'>&#9999<a>
+                </td>
             </tr>
             @endforeach
         </tbody>
