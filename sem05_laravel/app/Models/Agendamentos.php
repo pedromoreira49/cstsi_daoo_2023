@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Agendamentos extends Model
 {
     use HasFactory;
+    protected $fillable = ['user_id', 'helper_id', 'created_at'];
 }
