@@ -12,6 +12,6 @@
     <ul>
         <li>Credencial: {{$helper->credential}}</li>
     </ul>
-    <p><a href="http://localhost:8000/helper">Voltar</a></p>
+    <p><a href="{{route('helpers')}}">Voltar</a></p>
 </body>
 </html>
