@@ -27,7 +27,7 @@
                 <td>{{$helper->email}}</td>
                 <td>{{$helper->credential}}</td>
                 <td>
-                    
+                    <a href="{{route('deleteHelper', $helper->id)}}" title='Deletar'>&#128465</a>
                     <a href="{{route('editHelper', $helper->id)}}" title='Editar'>&#9999<a>
                 </td>
             </tr>
