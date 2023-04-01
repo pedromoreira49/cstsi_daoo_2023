@@ -49,4 +49,17 @@ class HelpersController extends Controller
         return redirect('/helpers');
     }
 
+    public function deleteHelper($id){
+        return view('helpers/helper_remove', ['helper' => Helpers::find($id)]);
+    }
+
+    public function removeHelper(Request $request, $id){
+        if($request->confirmar === "Deletar"){
+            if(!Helpers::destroy($id)){
+                dd("Erro ao deletar o usuário $id!");
+            }
+        }
+        return redirect('/helpers');
+    }
+
 }
