@@ -48,4 +48,17 @@ class AgendamentosController extends Controller
             dd("Erro ao atualizar agendamento $id");
         return redirect('/agendamentos');
     }
+
+    public function deleteAgendamento($id){
+        return view('agendamentos/agendamento_remove', ['agendamento' => Agendamentos::find($id)]);
+    }
+
+    public function removeAgendamento(Request $request, $id){
+        if($request->confirmar === "Deletar"){
+            if(!Agendamentos::destroy($id)){
+                dd("Erro ao deletar o usuário $id!");
+            }
+        }
+        return redirect('/agendamentos');
+    }
 }
