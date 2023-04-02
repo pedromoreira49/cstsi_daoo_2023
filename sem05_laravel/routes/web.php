@@ -69,3 +69,7 @@ Route::post('/agendamento', [AgendamentosController::class, 'storeAgendamento'])
 ##update
 Route::get('/agendamento/{id}/edit', [AgendamentosController::class, 'editAgendamento'])->name('editAgendamento');
 Route::post('/agendamento/{id}/update', [AgendamentosController::class, 'updateAgendamento'])->name('updateAgendamento');
+
+##delete
+Route::get('/agendamento/{id}/delete', [AgendamentosController::class, 'deleteAgendamento'])->name('deleteAgendamento');
+Route::post('/agendamento/{id}/delete', [AgendamentosController::class, 'removeAgendamento'])->name('removeAgendamento');
