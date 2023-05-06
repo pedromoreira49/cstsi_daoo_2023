@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Home;
 
 class HomeController extends Controller
 {
     public function index(){
-        echo 'HomeController: Hello world!';
-        dd($this);
+        return view('Home/home');
     }
 }
