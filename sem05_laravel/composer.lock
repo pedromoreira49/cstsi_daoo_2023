@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe33f98a750b8c5a51b30c78bd3fab21",
+    "content-hash": "4ff962f46024c8635f2b5f7b93f23964",
     "packages": [
         {
             "name": "brick/math",
@@ -2760,6 +2760,52 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.11.13"
             },
             "time": "2023-03-21T14:22:44+00:00"
+        },
+        {
+            "name": "rafaelwendel/phpsupabase",
+            "version": "0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rafaelwendel/phpsupabase.git",
+                "reference": "af48fcd4f1354ee208fe8e415d5b903eaf67ab43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rafaelwendel/phpsupabase/zipball/af48fcd4f1354ee208fe8e415d5b903eaf67ab43",
+                "reference": "af48fcd4f1354ee208fe8e415d5b903eaf67ab43",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPSupabase\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rafael Wendel Pinheiro",
+                    "email": "rafaelwendel@hotmail.com"
+                }
+            ],
+            "description": "PHPSupabase is a library written in php language, which allows you to use the resources of a project created in Supabase (https://supabase.io), through integration with its Rest API.",
+            "homepage": "https://github.com/rafaelwendel/phpsupabase",
+            "keywords": [
+                "client",
+                "php",
+                "supabase"
+            ],
+            "support": {
+                "issues": "https://github.com/rafaelwendel/phpsupabase/issues",
+                "source": "https://github.com/rafaelwendel/phpsupabase/tree/0.0.4"
+            },
+            "time": "2022-12-15T12:04:09+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
