@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Insert new Produto</h1>
+    <h1>Insert new User</h1>
     <form action="/user" method="POST">
         @csrf
         {{-- <input type="hidden" name="_token" value="{{csrf_token()}}"/> --}}
