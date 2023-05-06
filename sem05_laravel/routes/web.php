@@ -4,7 +4,10 @@ use App\Http\Controllers\AgendamentosController;
 use App\Http\Controllers\HelpersController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/', [HomeController::class, 'index']);
 
 #CRUD (Produtos)
 ##read
