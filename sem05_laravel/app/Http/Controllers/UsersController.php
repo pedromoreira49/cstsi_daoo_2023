@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Users;
 use Illuminate\Http\Request;
+use \PHPSupabase\Service;
 
 class UsersController extends Controller
 {
     private $users;
 
     public function __construct(){
+        //dd(env('DB_CONNECTION'));
         $this->users = new Users();
     }
 
@@ -61,5 +63,7 @@ class UsersController extends Controller
         }
         return redirect('/users');
     }
+
+
 
 }
