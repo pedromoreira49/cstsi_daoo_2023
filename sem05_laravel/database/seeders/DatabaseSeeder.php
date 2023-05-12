@@ -14,11 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+	    $seedRegiao = new RegiaoSeeder();
+        $seedRegiao->run();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        (new EstadoSeeder)->run();
+
+        \App\Models\Fornecedor::factory(fake()->randomNumber(2))
+                ->hasProdutos(fake()->randomNumber(1))
+                ->create();
     }
 }
