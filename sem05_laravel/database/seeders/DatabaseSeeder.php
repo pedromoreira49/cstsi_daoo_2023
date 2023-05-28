@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Fornecedor;
+use Illuminate\Support\Facades\Log;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,10 +19,15 @@ class DatabaseSeeder extends Seeder
 	    $seedRegiao = new RegiaoSeeder();
         $seedRegiao->run();
 
-        (new EstadoSeeder)->run();
+        (new EstadoSeeder())->run();
+        (new PromocaoSeeder())->run();
 
-        \App\Models\Fornecedor::factory(fake()->randomNumber(2))
+        //(new PromocaoProdutoSeeder())->run();
+
+        Fornecedor::factory(fake()->randomNumber(2))
                 ->hasProdutos(fake()->randomNumber(1))
                 ->create();
+
+
     }
 }
